@@ -1,24 +1,542 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lxc-EZ-8X4">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="i85-OE-Pvc">
+            <objects>
+                <navigationController id="lxc-EZ-8X4" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WHG-DP-FIb">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uL5-fq-6xU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vty-eT-VqR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54" y="18"/>
+        </scene>
+        <!--Start Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Start Page" id="BYZ-38-t0r" customClass="ViewController" customModule="Bigem_MultiPage_Layout_A5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageBgFirst" translatesAutoresizingMaskIntoConstraints="NO" id="vnw-Sk-POS">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tales For Tiny Explorers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c24-U1-a7s">
+                                <rect key="frame" x="0.0" y="161.66666666666666" width="393" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oy0-qb-zQY">
+                                <rect key="frame" x="301.66666666666669" y="709" width="50" height="34"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <segue destination="eEx-sL-dhO" kind="show" id="q3h-0H-1IH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f37-nu-1vQ">
+                                <rect key="frame" x="60" y="351" width="273" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rA8-l6-6k0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Level 1">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="PTH-RG-tys" kind="show" id="Dle-Ho-c8V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pvR-ni-zvJ">
+                                <rect key="frame" x="60" y="451" width="273" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tz5-Os-IW3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Level 2">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="uXx-No-VU8" kind="show" id="aGw-zk-bTP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vnw-Sk-POS" secondAttribute="bottom" id="1yp-3K-oxR"/>
+                            <constraint firstItem="pvR-ni-zvJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AIh-5t-dki"/>
+                            <constraint firstItem="c24-U1-a7s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DAT-nZ-GDi"/>
+                            <constraint firstItem="c24-U1-a7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DR0-GO-ub8"/>
+                            <constraint firstItem="oy0-qb-zQY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="300" id="Ll2-xV-kpX"/>
+                            <constraint firstItem="oy0-qb-zQY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="130" id="P1p-ti-x86"/>
+                            <constraint firstAttribute="trailing" secondItem="vnw-Sk-POS" secondAttribute="trailing" id="Pk7-qm-4hy"/>
+                            <constraint firstItem="c24-U1-a7s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QEW-rO-C1p"/>
+                            <constraint firstItem="pvR-ni-zvJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="ajn-sV-RdF"/>
+                            <constraint firstItem="f37-nu-1vQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="ayR-Rt-HC4"/>
+                            <constraint firstItem="f37-nu-1vQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="cym-ys-ll8"/>
+                            <constraint firstItem="f37-nu-1vQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="d4X-IC-cwR"/>
+                            <constraint firstItem="pvR-ni-zvJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="gts-mA-3ae"/>
+                            <constraint firstItem="c24-U1-a7s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-250" id="mlJ-c0-qUN"/>
+                            <constraint firstItem="vnw-Sk-POS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pC6-Sw-SJm"/>
+                            <constraint firstItem="vnw-Sk-POS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wP6-gb-adU"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aio-hL-5iD"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="771.75572519083971" y="17.605633802816904"/>
+        </scene>
+        <!--Level1 First-->
+        <scene sceneID="EWu-St-aSo">
+            <objects>
+                <viewController title="Level1 First" id="PTH-RG-tys" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QYk-HY-B2m">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageLevel1BG" translatesAutoresizingMaskIntoConstraints="NO" id="pOw-My-9UP">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FGl-uE-6KG">
+                                <rect key="frame" x="40" y="318.66666666666669" width="313" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="ESk-ll-2sR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Cinderella">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemMintColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="rf6-wD-e0S" kind="show" id="2XE-ln-VIX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9O-fT-j03">
+                                <rect key="frame" x="40" y="458.66666666666669" width="313" height="75.000000000000057"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="0zP-eC-L9O"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Rapunzel">
+                                            <attributes>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="QoV-Wn-SJL" kind="show" id="CZw-qX-L7X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NsF-XE-9XZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FGl-uE-6KG" firstAttribute="leading" secondItem="NsF-XE-9XZ" secondAttribute="leading" constant="40" id="1rp-dQ-iz3"/>
+                            <constraint firstItem="FGl-uE-6KG" firstAttribute="centerY" secondItem="QYk-HY-B2m" secondAttribute="centerY" constant="-70" id="5ho-hq-ZX3"/>
+                            <constraint firstAttribute="trailing" secondItem="pOw-My-9UP" secondAttribute="trailing" id="IHO-iB-uy3"/>
+                            <constraint firstItem="pOw-My-9UP" firstAttribute="leading" secondItem="QYk-HY-B2m" secondAttribute="leading" id="PPc-mB-u0W"/>
+                            <constraint firstItem="M9O-fT-j03" firstAttribute="centerX" secondItem="QYk-HY-B2m" secondAttribute="centerX" id="aUb-yg-VbL"/>
+                            <constraint firstItem="M9O-fT-j03" firstAttribute="leading" secondItem="NsF-XE-9XZ" secondAttribute="leading" constant="40" id="bn4-Cj-CcP"/>
+                            <constraint firstItem="pOw-My-9UP" firstAttribute="top" secondItem="QYk-HY-B2m" secondAttribute="top" id="oF9-eI-BW8"/>
+                            <constraint firstItem="M9O-fT-j03" firstAttribute="centerY" secondItem="QYk-HY-B2m" secondAttribute="centerY" constant="70" id="oS4-Bi-4JW"/>
+                            <constraint firstAttribute="bottom" secondItem="pOw-My-9UP" secondAttribute="bottom" id="ucE-vu-GLp"/>
+                            <constraint firstItem="FGl-uE-6KG" firstAttribute="centerX" secondItem="QYk-HY-B2m" secondAttribute="centerX" id="xhC-fH-33d"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="txA-G1-sXC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8A-v5-0oR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1574.8091603053435" y="-407.04225352112678"/>
+        </scene>
+        <!--RapunzelPage1-->
+        <scene sceneID="r0J-j4-NBQ">
+            <objects>
+                <viewController title="RapunzelPage1" id="QoV-Wn-SJL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2sZ-68-G6c">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rapunzel" translatesAutoresizingMaskIntoConstraints="NO" id="NCA-Np-sOa">
+                                <rect key="frame" x="31.666666666666657" y="65" width="330" height="482"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="482" id="FAh-xN-Bp8"/>
+                                    <constraint firstAttribute="width" constant="330" id="t3i-oV-fFH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jQ-NI-Sxg">
+                                <rect key="frame" x="16" y="329" width="361" height="344"/>
+                                <string key="text">In a secluded tower hidden deep within the forest, Rapunzel, with her long golden locks, lived under the watchful eye of a wicked enchantress who kept her isolated from the world. Despite her confinement, Rapunzel's spirit remained unbroken, and she spent her days singing and dreaming of the outside world. One day, a brave prince stumbled upon the tower and heard Rapunzel's enchanting voice. Determined to rescue her, he climbed her hair and whisked her away to freedom. Together, they escaped the clutches of the enchantress and embarked on a journey of love and adventure, proving that even the tallest towers cannot confine the power of true love.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2VV-ex-63i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5jQ-NI-Sxg" firstAttribute="centerY" secondItem="2sZ-68-G6c" secondAttribute="centerY" constant="75" id="27T-3A-vT2"/>
+                            <constraint firstItem="5jQ-NI-Sxg" firstAttribute="centerX" secondItem="2sZ-68-G6c" secondAttribute="centerX" id="Dpd-76-xU8"/>
+                            <constraint firstItem="2VV-ex-63i" firstAttribute="trailing" secondItem="5jQ-NI-Sxg" secondAttribute="trailing" constant="16" id="Qkr-jF-6Pb"/>
+                            <constraint firstItem="NCA-Np-sOa" firstAttribute="centerX" secondItem="2sZ-68-G6c" secondAttribute="centerX" id="tMF-DI-Uty"/>
+                            <constraint firstItem="NCA-Np-sOa" firstAttribute="centerY" secondItem="2sZ-68-G6c" secondAttribute="centerY" constant="-120" id="x8m-TG-Ott"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7iq-6I-U4B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DaA-D0-73Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2359.5419847328244" y="-4.2253521126760569"/>
+        </scene>
+        <!--CindrellaPage1-->
+        <scene sceneID="l6A-Fe-dfX">
+            <objects>
+                <viewController title="CindrellaPage1" id="rf6-wD-e0S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J8p-oZ-0Pj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cinderella" translatesAutoresizingMaskIntoConstraints="NO" id="08j-pb-8sK">
+                                <rect key="frame" x="16" y="103" width="361" height="666"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="680-U8-LE8">
+                                <rect key="frame" x="16" y="212.99999999999997" width="361" height="476.33333333333326"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <string key="text">Once upon a time, in a quaint village, there lived a kind-hearted girl named Cinderella. She endured a life of hardship, toiling away under the tyranny of her wicked stepmother and stepsisters. Despite her circumstances, Cinderella remained hopeful, finding solace in the company of the animals around her. One fateful evening, her life changed when an invitation to the royal ball arrived,  offering a chance for her dreams to come true. With the help of a magical fairy godmother, Cinderella transformed into a vision of beauty, captivating the prince with her grace and charm. As the clock struck midnight, she fled the palace, leaving behind a single slipper. Determined to find his mysterious enchantress, the prince scoured the knigdom, until finally, Cinderella's true identity was revealed, and they lived happily ever after.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xy-6x-6kW">
+                                <rect key="frame" x="303" y="697.33333333333337" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="0bs-CR-WRt"/>
+                                    <constraint firstAttribute="height" constant="35" id="VeJ-cK-6xi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next">
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="VWC-K3-cxr" kind="show" id="xor-BC-TdM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="siM-w0-gFX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="08j-pb-8sK" secondAttribute="trailing" id="0Nw-dk-8W6"/>
+                            <constraint firstItem="08j-pb-8sK" firstAttribute="top" secondItem="J8p-oZ-0Pj" secondAttribute="topMargin" id="1qX-Fy-Utr"/>
+                            <constraint firstItem="3xy-6x-6kW" firstAttribute="top" secondItem="680-U8-LE8" secondAttribute="bottom" constant="8" id="6nH-5U-ejh"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="08j-pb-8sK" secondAttribute="bottom" id="A2G-d2-8lS"/>
+                            <constraint firstItem="08j-pb-8sK" firstAttribute="leading" secondItem="J8p-oZ-0Pj" secondAttribute="leadingMargin" id="EKV-mf-EnA"/>
+                            <constraint firstItem="siM-w0-gFX" firstAttribute="trailing" secondItem="3xy-6x-6kW" secondAttribute="trailing" constant="30" id="HWP-gF-b14"/>
+                            <constraint firstItem="siM-w0-gFX" firstAttribute="trailing" secondItem="680-U8-LE8" secondAttribute="trailing" constant="16" id="ZpH-5f-6wf"/>
+                            <constraint firstItem="680-U8-LE8" firstAttribute="centerY" secondItem="J8p-oZ-0Pj" secondAttribute="centerY" constant="25" id="aTw-3Q-GHj"/>
+                            <constraint firstItem="680-U8-LE8" firstAttribute="centerX" secondItem="J8p-oZ-0Pj" secondAttribute="centerX" id="iaV-aq-ihX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1iB-Ho-zkW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NXD-e1-1iA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2359.5419847328244" y="-702.11267605633805"/>
+        </scene>
+        <!--CinderellaPage2-->
+        <scene sceneID="GKv-J5-Mrx">
+            <objects>
+                <viewController title="CinderellaPage2" id="VWC-K3-cxr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fbb-rY-lT1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cinderella2" translatesAutoresizingMaskIntoConstraints="NO" id="Ve3-H4-AKk">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRG-mM-fBY">
+                                <rect key="frame" x="16" y="265.66666666666669" width="361" height="150.66666666666669"/>
+                                <string key="text">Cinderella's tale is a timeless reminder of resilience, kindness, and the belief that goodness triumphs over adversity. Her Journey from rags to riches, guided by love and perseverance, inspires generations to embrace hope and never give up on their dreams.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h2R-PT-h37"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ve3-H4-AKk" firstAttribute="top" secondItem="h2R-PT-h37" secondAttribute="top" id="Lmd-wb-5St"/>
+                            <constraint firstItem="eRG-mM-fBY" firstAttribute="centerY" secondItem="Fbb-rY-lT1" secondAttribute="centerY" constant="-85" id="OWu-p8-cM8"/>
+                            <constraint firstItem="h2R-PT-h37" firstAttribute="trailing" secondItem="Ve3-H4-AKk" secondAttribute="trailing" id="OdB-71-bMq"/>
+                            <constraint firstItem="h2R-PT-h37" firstAttribute="bottom" secondItem="Ve3-H4-AKk" secondAttribute="bottom" id="Rqi-NF-v3j"/>
+                            <constraint firstItem="h2R-PT-h37" firstAttribute="trailing" secondItem="eRG-mM-fBY" secondAttribute="trailing" constant="16" id="UIY-e9-dpd"/>
+                            <constraint firstItem="Ve3-H4-AKk" firstAttribute="leading" secondItem="h2R-PT-h37" secondAttribute="leading" id="cb7-pq-pOT"/>
+                            <constraint firstItem="eRG-mM-fBY" firstAttribute="centerX" secondItem="Fbb-rY-lT1" secondAttribute="centerX" id="xn2-hf-daS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="C9O-La-z6f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xio-QY-HpD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3133.5877862595416" y="-702.11267605633805"/>
+        </scene>
+        <!--Information Page-->
+        <scene sceneID="OF0-gm-qAP">
+            <objects>
+                <viewController title="Information Page" id="eEx-sL-dhO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EYL-Ik-IHC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="InfoImage" translatesAutoresizingMaskIntoConstraints="NO" id="UMe-H0-dqw">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5A-ce-bYw">
+                                <rect key="frame" x="16" y="550.66666666666663" width="361" height="191"/>
+                                <string key="text">This app is about the tales for kids to read before sleeping and for learning lessons as well. This app includes two levels of the story in which level 1 has two story and level 2 has one story. Level 1 and Level 2 both of the level can be accessed by childern age above 5 years old.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dC7-Hi-7s8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R5A-ce-bYw" firstAttribute="centerX" secondItem="EYL-Ik-IHC" secondAttribute="centerX" id="0sK-ff-NuF"/>
+                            <constraint firstAttribute="trailing" secondItem="R5A-ce-bYw" secondAttribute="trailing" constant="16" id="6VD-IE-I9S"/>
+                            <constraint firstItem="R5A-ce-bYw" firstAttribute="centerY" secondItem="EYL-Ik-IHC" secondAttribute="centerY" constant="220" id="O2V-h6-vpU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6t6-kj-GIq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEU-Mz-pjy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783.96946564885491" y="807.74647887323943"/>
+        </scene>
+        <!--Leve2 First-->
+        <scene sceneID="evK-Li-veO">
+            <objects>
+                <viewController title="Leve2 First" id="uXx-No-VU8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ejB-PU-dXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImageLevel2BG" translatesAutoresizingMaskIntoConstraints="NO" id="oyY-7e-vbU">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvs-La-7hf">
+                                <rect key="frame" x="40" y="663.66666666666663" width="313" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="hqJ-gj-8qJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Sleeping Beauty">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="30" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="3mx-BG-V6l" kind="show" id="k1y-65-qQr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9PP-2i-sAl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oyY-7e-vbU" secondAttribute="trailing" id="3rJ-kr-6Rd"/>
+                            <constraint firstItem="Gvs-La-7hf" firstAttribute="centerX" secondItem="ejB-PU-dXQ" secondAttribute="centerX" id="4ab-bZ-Ceh"/>
+                            <constraint firstAttribute="bottom" secondItem="oyY-7e-vbU" secondAttribute="bottom" id="715-g3-KTw"/>
+                            <constraint firstItem="oyY-7e-vbU" firstAttribute="top" secondItem="ejB-PU-dXQ" secondAttribute="top" id="7IY-WD-prI"/>
+                            <constraint firstItem="Gvs-La-7hf" firstAttribute="leading" secondItem="9PP-2i-sAl" secondAttribute="leading" constant="40" id="IEg-hN-4Og"/>
+                            <constraint firstItem="Gvs-La-7hf" firstAttribute="centerY" secondItem="ejB-PU-dXQ" secondAttribute="centerY" constant="275" id="NXW-YH-gTy"/>
+                            <constraint firstItem="oyY-7e-vbU" firstAttribute="leading" secondItem="ejB-PU-dXQ" secondAttribute="leading" id="t8j-Wg-6ce"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Giv-Mf-Y6o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAR-iv-8Wi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1491" y="430"/>
+        </scene>
+        <!--SleepingBeautyPage1-->
+        <scene sceneID="fbz-XP-Unm">
+            <objects>
+                <viewController title="SleepingBeautyPage1" id="3mx-BG-V6l" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yuv-n5-7bq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SleepingBeauty" translatesAutoresizingMaskIntoConstraints="NO" id="SSl-Im-K2U">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRv-mN-Lmv">
+                                <rect key="frame" x="16" y="340" width="361" height="322.33333333333326"/>
+                                <string key="text">Once upon a time in a kingdom nestled deep within the woods, there lived a beautiful princess named Aurora. On her sixteenth birthday, an evil fairy cast a curse upon her, declaring that she would prick her finger on a spindle and fall into an eternal slumber. Despite her parents' efforts to protect her, Aurora succumbed to the curse. The entire kingdom fell into a deep sleep alongside her until a brave prince arrived, breaking the spell with true love's kiss, awakening Aurora and restoring happiness to the kingdom once more. From that day forward, Aurora and her prince lived happily ever after, proving that true love conquers all.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdH-9T-Lfs">
+                                <rect key="frame" x="303" y="677.33333333333337" width="60" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="07a-Iw-WGw"/>
+                                    <constraint firstAttribute="width" constant="60" id="t3s-gE-yOi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Next">
+                                    <color key="baseBackgroundColor" systemColor="systemCyanColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="y5g-2Z-EaV" kind="show" id="YyN-ev-jhd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JeE-N2-HwK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SSl-Im-K2U" secondAttribute="trailing" id="0fQ-zr-ZFO"/>
+                            <constraint firstItem="JeE-N2-HwK" firstAttribute="trailing" secondItem="yRv-mN-Lmv" secondAttribute="trailing" constant="16" id="4JU-ST-GV9"/>
+                            <constraint firstItem="SSl-Im-K2U" firstAttribute="leading" secondItem="Yuv-n5-7bq" secondAttribute="leading" id="E7y-ZC-6WD"/>
+                            <constraint firstItem="JeE-N2-HwK" firstAttribute="trailing" secondItem="cdH-9T-Lfs" secondAttribute="trailing" constant="30" id="IKQ-d3-7Dr"/>
+                            <constraint firstItem="yRv-mN-Lmv" firstAttribute="centerX" secondItem="Yuv-n5-7bq" secondAttribute="centerX" id="Vwc-ko-vjB"/>
+                            <constraint firstItem="yRv-mN-Lmv" firstAttribute="centerY" secondItem="Yuv-n5-7bq" secondAttribute="centerY" constant="75" id="ev9-UF-fqs"/>
+                            <constraint firstItem="SSl-Im-K2U" firstAttribute="top" secondItem="Yuv-n5-7bq" secondAttribute="top" id="gsI-aO-YmI"/>
+                            <constraint firstAttribute="bottom" secondItem="SSl-Im-K2U" secondAttribute="bottom" id="yLr-p6-y7q"/>
+                            <constraint firstItem="cdH-9T-Lfs" firstAttribute="top" secondItem="yRv-mN-Lmv" secondAttribute="bottom" constant="15" id="zho-u6-s4U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sFu-Ua-7Fv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fl0-tl-R80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2359.5419847328244" y="757.74647887323943"/>
+        </scene>
+        <!--SleepingBeautyPage2-->
+        <scene sceneID="fOj-oH-Snk">
+            <objects>
+                <viewController title="SleepingBeautyPage2" id="y5g-2Z-EaV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4br-eR-Zrl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SleepingBeauty2" translatesAutoresizingMaskIntoConstraints="NO" id="ppc-P1-JdY">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbF-WT-F9B">
+                                <rect key="frame" x="16" y="183" width="361" height="236.33333333333337"/>
+                                <string key="text">With every passing year, the tale of Sleeping Beauty grew in the hearts of those who heard it. Aurora's story became a timeless reminder of the power of love, courage, and the enduring hope that even in the darkest of times, there is always a chance for a happy ending. And so, the legend of Sleeping Beauty continued to enchant generations, inspiring them to believe in the magic of true love's kiss and the promise of a happily ever after.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BjK-l6-Duf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ppc-P1-JdY" secondAttribute="bottom" id="0lw-so-uiR"/>
+                            <constraint firstAttribute="trailing" secondItem="ppc-P1-JdY" secondAttribute="trailing" id="5NL-9o-Y2Z"/>
+                            <constraint firstItem="ppc-P1-JdY" firstAttribute="top" secondItem="4br-eR-Zrl" secondAttribute="top" id="KX1-f7-JzZ"/>
+                            <constraint firstItem="BjK-l6-Duf" firstAttribute="trailing" secondItem="wbF-WT-F9B" secondAttribute="trailing" constant="16" id="RUT-9Z-vb2"/>
+                            <constraint firstItem="ppc-P1-JdY" firstAttribute="leading" secondItem="4br-eR-Zrl" secondAttribute="leading" id="VXU-rm-gKs"/>
+                            <constraint firstItem="wbF-WT-F9B" firstAttribute="centerX" secondItem="4br-eR-Zrl" secondAttribute="centerX" id="pHi-is-yQV"/>
+                            <constraint firstItem="wbF-WT-F9B" firstAttribute="centerY" secondItem="4br-eR-Zrl" secondAttribute="centerY" constant="-125" id="te7-vI-Odb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eec-zS-6mC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7g0-jY-Vk5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3133.5877862595416" y="757.74647887323943"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cinderella" width="1174.3333740234375" height="2235.333251953125"/>
+        <image name="Cinderella2" width="666.66668701171875" height="666.66668701171875"/>
+        <image name="ImageBgFirst" width="426.33334350585938" height="426.66665649414062"/>
+        <image name="ImageLevel1BG" width="426.66665649414062" height="426.66665649414062"/>
+        <image name="ImageLevel2BG" width="301.66665649414062" height="426.66665649414062"/>
+        <image name="InfoImage" width="1276" height="2056.333251953125"/>
+        <image name="Rapunzel" width="1551.6666259765625" height="1691.3333740234375"/>
+        <image name="SleepingBeauty" width="1571.3333740234375" height="1571.3333740234375"/>
+        <image name="SleepingBeauty2" width="1408.3333740234375" height="1753.3333740234375"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
